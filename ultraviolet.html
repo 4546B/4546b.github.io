@@ -1,0 +1,31 @@
+<img src="uv.png" alt="trolign">
+
+<button style="height: 1cm; width: 5cm; background-color: #636663;color:aqua;border-radius: 7px;">Click Me To Play!</button>
+<script>
+    var urlObj = new window.URL(window.location.href);
+    var url = "https://Ultraviolet-Node-3.chaoschaoseclip.repl.co";
+
+    if (url) {
+        var win;
+
+        document.querySelector('button').onclick = function() {
+            if (win) {
+                win.focus();
+            } 
+            else {
+                win = window.open();
+                win.document.body.style.margin = '0';
+                win.document.body.style.height = '100vh';
+                var iframe = win.document.createElement('iframe');
+                iframe.style.border = 'none';
+                iframe.style.width = '100%';
+                iframe.style.height = '100%';
+                iframe.style.margin = '0';
+                iframe.src = url;
+                win.document.body.appendChild(iframe);
+            }
+            document.querySelector('button').style.background='#636663';
+            document.querySelector('button').innerHTML="Opened!";
+        };
+    }
+</script>
