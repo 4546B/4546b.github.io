@@ -46,11 +46,45 @@
     }
     </script>
 
-<button id="cockandballs" style="height: 1cm; width: 5cm; background-color: #636663;color:aqua;border-radius: 7px;">rammerhead</button>
+<button id="cockandballs" style="height: 1cm; width: 5cm; background-color: #636663;color:aqua;border-radius: 7px;">Browser Within A Browser</button>
 
 <script>
     var urlObj = new window.URL(window.location.href);
     var url = "https://dfsdf-76u.pages.dev/";
+
+    if (url) {
+        var win;
+//god i need therapy, i hope no one is looking at this dog ass code
+        document.getElementById('cockandballs').onclick = function() {
+            if (win) {
+                win.focus();
+            } 
+            else {
+                win = window.open();
+                win.document.body.style.margin = '0';
+                win.document.body.style.height = '100vh';
+                var iframe = win.document.createElement('iframe');
+                iframe.style.border = 'none';
+                iframe.style.width = '100%';
+                iframe.style.height = '100%';
+                iframe.style.margin = '0';
+                iframe.src = url;
+                win.document.body.appendChild(iframe);
+                //pls god forgive me for this skidded code, credit to the sealcentral.gq team for this code, i stole it shamelessly
+            
+                
+            }
+            document.querySelector('button').style.background='#636663';
+            document.querySelector('button').innerHTML="Opened!";
+        };
+    }
+    </script>
+
+<button id="cum" style="height: 1cm; width: 5cm; background-color: #636663;color:aqua;border-radius: 7px;">Browser Within A Browser</button>
+
+<script>
+    var urlObj = new window.URL(window.location.href);
+    var url = "stolencode.html";
 
     if (url) {
         var win;
